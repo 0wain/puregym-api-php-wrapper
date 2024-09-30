@@ -39,7 +39,15 @@ expect()->extend('toBeOne', function () {
 |
 */
 
-function something()
+function env($var)
 {
-    // ..
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+    $dotenv->load();
+
+    return $_ENV[$var];
+}
+
+function client()
+{
+    return new Owainjones74\Puregym\PureGymClient(env('USERNAME'), env('PASSWORD'));
 }
