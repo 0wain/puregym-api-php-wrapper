@@ -1,0 +1,33 @@
+{
+    "name": "owainjones74/puregym-api-wrapper",
+    "description": "A PHP API wrapper for Puregym's unoffical mobile API",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Owainjones74\\Puregym\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Owainjones74\\Puregym\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/pest"
+    },
+    "authors": [
+        {
+            "name": "Owain Jones"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require-dev": {
+        "pestphp/pest": "3.x-dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
