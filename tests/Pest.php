@@ -47,7 +47,16 @@ function env($var)
     return $_ENV[$var];
 }
 
+$cachedClient = null;
 function client()
 {
-    return new Owainjones74\Puregym\PureGymClient(env('USERNAME'), env('PASSWORD'));
+    global $cachedClient;
+
+    if ($cachedClient) {
+        return $cachedClient;
+    }
+
+    $cachedClient = new Owainjones74\Puregym\PureGymClient(env('PUREGYM_USERNAME'), env('PUREGYM_PASSWORD'));
+
+    return $cachedClient;
 }
