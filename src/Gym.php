@@ -32,4 +32,15 @@ class Gym
 
         $this->client = $client;
     }
+
+    public function attendance()
+    {
+        $response = $this->client->curl('https://capi.puregym.com/api/v1/gyms/' . $this->id . '/attendance');
+
+        if (!$response) {
+            throw new \Exception('Could not get attendance data');
+        }
+
+        return new Attendance($response, $this->client);
+    }
 }
