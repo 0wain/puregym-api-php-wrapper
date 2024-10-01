@@ -6,6 +6,12 @@ Massive credit to [2t6h/puregym-attendance](https://github.com/2t6h/puregym-atte
 
 **Disclaimer**: This library is not affiliated with PureGym in any way. Use at your own risk.
 
+
+![Packagist Version](https://img.shields.io/packagist/v/owainjones74/puregym-api-wrapper.svg)
+![Total Downloads](https://img.shields.io/packagist/dt/owainjones74/puregym-api-wrapper.svg)
+
+https://packagist.org/packages/owainjones74/puregym-api-wrapper
+
 ## Installation
 
 1. Install the package with composer `composer require owainjones74/puregym-api-wrapper`
