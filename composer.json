@@ -1,6 +1,6 @@
 {
     "name": "owainjones74/puregym-api-wrapper",
-    "description": "A PHP API wrapper for Puregym's unoffical mobile API",
+    "description": "A PHP API wrapper for PureGym's mobile API",
     "type": "library",
     "license": "MIT",
     "autoload": {
