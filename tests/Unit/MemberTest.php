@@ -8,3 +8,10 @@ test('client is passed through', function () {
     $member = client()->member();
     expect($member->client)->toBeInstanceOf(Owainjones74\Puregym\PureGymClient::class);
 });
+
+
+test('can pull activity', function () {
+    $member = client()->member();
+
+    expect($member->activity())->toBeInstanceOf(Owainjones74\Puregym\Activity::class);
+});

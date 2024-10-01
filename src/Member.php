@@ -42,4 +42,15 @@ class Member
 
         $this->client = $client;
     }
+
+    public function activity()
+    {
+        $response = $this->client->curl('https://capi.puregym.com/api/v1/member/activity');
+
+        if (!$response) {
+            throw new \Exception('Could not get activity data');
+        }
+
+        return new Activity($response, $this->client);
+    }
 }
