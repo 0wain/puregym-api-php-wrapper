@@ -53,7 +53,7 @@ class PureGymClient
         return $gyms;
     }
 
-    private function curl($url, $method = 'GET', $data = [])
+    public function curl($url, $method = 'GET', $data = [])
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
