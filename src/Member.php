@@ -53,4 +53,9 @@ class Member
 
         return new Activity($response, $this->client);
     }
+
+    public function homeGym()
+    {
+        return $this->client->gym($this->homeGymId);
+    }
 }
