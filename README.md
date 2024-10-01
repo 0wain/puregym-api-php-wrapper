@@ -4,6 +4,12 @@ This is a PHP wrapper for the PureGym Mobile API. This API is not public facing 
 
 Massive credit to [2t6h/puregym-attendance](https://github.com/2t6h/puregym-attendance) for their work in reverse engineering the API. This library is based on their work.
 
+## Installation
+
+1. Install the package with composer `composer require owainjones74/puregym-api-wrapper`
+2. Require the composer autoloader `require 'vendor/autoload.php';` if required.
+3. Create a new instance of the PureGymClient with your email and pin `$client = new PureGymClient('my@email.com', '12345678');`
+
 ## Tests
 
 1. Install the dev dependencies with `composer install --dev`
