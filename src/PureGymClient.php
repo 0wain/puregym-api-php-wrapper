@@ -53,6 +53,19 @@ class PureGymClient
         return $gyms;
     }
 
+    public function gym($id)
+    {
+        $allGyms = $this->allGyms();
+
+        foreach($allGyms as $gym) {
+            if($gym->id === $id) {
+                return $gym;
+            }
+        }
+
+        return null;
+    }
+
     public function curl($url, $method = 'GET', $data = [])
     {
         $ch = curl_init();

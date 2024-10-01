@@ -13,6 +13,11 @@ test('all returned gyms are gym class', function () {
     }
 });
 
+test('can get specific gyms', function () {
+    $gym = client()->gym(69);
+    expect($gym)->toBeInstanceOf(Owainjones74\Puregym\Gym::class);
+});
+
 test('client is passed through', function () {
     $gyms = client()->allGyms();
 
