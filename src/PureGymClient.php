@@ -34,6 +34,13 @@ class PureGymClient
         return $response['access_token'];
     }
 
+    public function member()
+    {
+        $response = $this->curl('https://capi.puregym.com/api/v1/member');
+
+        return new Member($response, $this);
+    }
+
     public function allGyms()
     {
         $response = $this->curl('https://capi.puregym.com/api/v1/gyms/');
