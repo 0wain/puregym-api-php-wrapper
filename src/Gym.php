@@ -10,12 +10,14 @@ class Gym
     public array $address;
     public string $phoneNumber;
     public string $emailAddress;
-    public array $openingHours;
+    public array $gymOpeningHours;
     public array $accessOptions;
     public array $location;
     public ?string $reopenDate;
 
-    public function __construct(array $data)
+    public ?PureGymClient $client;
+
+    public function __construct(array $data, ?PureGymClient $client = null)
     {
         $this->id = $data['id'];
         $this->name = $data['name'];
@@ -23,9 +25,11 @@ class Gym
         $this->address = $data['address'];
         $this->phoneNumber = $data['phoneNumber'];
         $this->emailAddress = $data['emailAddress'];
-        $this->openingHours = $data['gymOpeningHours'];
+        $this->gymOpeningHours = $data['gymOpeningHours'];
         $this->accessOptions = $data['accessOptions'];
         $this->location = $data['location'];
         $this->reopenDate = $data['reopenDate'];
+
+        $this->client = $client;
     }
 }

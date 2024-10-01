@@ -40,7 +40,7 @@ class PureGymClient
 
         $gyms = [];
         foreach ($response as $gym) {
-            $gyms[] = new Gym($gym);
+            $gyms[] = new Gym($gym, $this);
         }
 
         return $gyms;
